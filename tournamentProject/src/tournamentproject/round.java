@@ -48,6 +48,9 @@ public class round extends match {
    
     
     */
+    public competitor deterineWinner(){
+        return competitor;
+    }
     
     /*
     should this print out the winners list and or the matches list?
