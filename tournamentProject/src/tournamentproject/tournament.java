@@ -10,6 +10,10 @@ package tournamentproject;
  * @author Haley
  */
 public class tournament extends round{
+    /*
+    needs a scanner so that it can read in a list of names and
+    create an arraylist of competitors
+    */
     public tournament(){
         
     }
