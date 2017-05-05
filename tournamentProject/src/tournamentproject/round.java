@@ -49,7 +49,7 @@ public class round extends match {
     
     */
     public competitor deterineWinner(){
-        return competitor;
+        return super.getCompetitor1();
     }
     
     /*
