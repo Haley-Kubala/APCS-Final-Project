@@ -5,18 +5,31 @@
  */
 package tournamentproject;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author Haley
  */
-public class tournament extends round{
-    /*
-    needs a scanner so that it can read in a list of names and
-    create an arraylist of competitors
-    */
-    public tournament(){
-        
+public class tournament extends round {
+    
+   private ArrayList<> competitors = new ArrayList<>(); 
+  
+
+    public static void main(String args[]) throws IOException {
+        Scanner file = new Scanner(new File("some file"));
+        while (file.hasNextLine()) {
+            int i = file.nextInt();
+            competitors.add(i);
+            /*
+            intitialize a new tournament
+            print out the winner(s)
+             */
+
+        }
+        file.close();
     }
-    
-    
 }
