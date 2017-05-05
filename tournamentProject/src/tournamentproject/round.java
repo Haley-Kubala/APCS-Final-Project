@@ -14,7 +14,10 @@ import java.util.ArrayList;
 public class round extends match {
 
     private ArrayList<match> matches = new ArrayList<>();
-
+    /*
+    how does round take the scanned in list from the file
+    and make those strings into matches?
+    */
     /*
     ArrayList<match> winners = new ArrayList<>();
     is this the correct way to reference winners... or is it just a competitor object
@@ -26,7 +29,13 @@ public class round extends match {
     public round() {
 
     }
-
+    /*
+    do i even need this with the set methods?
+    
+    */
+    public round(ArrayList<match> m){
+        matches = m;
+    }
     /**
      * @return the matches
      */

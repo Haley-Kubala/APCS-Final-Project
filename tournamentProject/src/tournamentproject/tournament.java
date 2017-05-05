@@ -15,20 +15,21 @@ import java.util.Scanner;
  * @author Haley
  */
 public class tournament extends round {
-    
-   private ArrayList<> competitors = new ArrayList<>(); 
-  
+
+    private ArrayList<> competitors = new ArrayList<>();
+    // where does the constructor go? inside here or inside main?
+    //also should this even be created here?
 
     public static void main(String args[]) throws IOException {
         Scanner file = new Scanner(new File("some file"));
         while (file.hasNextLine()) {
             int i = file.nextInt();
             competitors.add(i);
-            /*
-            intitialize a new tournament
-            print out the winner(s)
-             */
-
+            /* pass in list of competitors?? or should
+            i call match instead?
+            */
+            round round = new round(competitors);
+            
         }
         file.close();
     }
