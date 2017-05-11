@@ -13,6 +13,9 @@ public class competitor {
     private String name;
     private int placement;
 
+    public competitor(String n) {
+        name = n;
+    }
     /**
      * @return the name
      */

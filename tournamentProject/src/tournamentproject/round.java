@@ -11,14 +11,17 @@ import java.util.ArrayList;
  *
  * @author Haley
  */
-public class round extends match {
+public class round {
 
     private ArrayList<match> matches = new ArrayList<>();
+    private ArrayList<competitor> winners = new ArrayList<>();
+    private ArrayList<competitor> losers = new ArrayList<>();
+
     /*
     how does round take the scanned in list from the file
     and make those strings into matches?
-    */
-    /*
+     */
+ /*
     ArrayList<match> winners = new ArrayList<>();
     is this the correct way to reference winners... or is it just a competitor object
     instead of a match object? 
@@ -26,16 +29,15 @@ public class round extends match {
     what class/method/whatever uses this list? 
     does it need to be ordered?
      */
-    public round() {
+    public round(ArrayList<competitor> competitors) {
+        /*needs to figure out how many matches there are going to be
+        assign competitors in order
+        this is how we populate matches
+        
+         */
 
     }
-    /*
-    do i even need this with the set methods?
-    
-    */
-    public round(ArrayList<match> m){
-        matches = m;
-    }
+
     /**
      * @return the matches
      */
@@ -49,23 +51,18 @@ public class round extends match {
     public void setMatches(ArrayList<match> matches) {
         this.matches = matches;
     }
-    
-    /*
-    determineWinner() method:
-    what data type?
-    does it need user input(i think so)
-   
-    
-    */
-    public competitor deterineWinner(){
-        return super.getCompetitor1();
+
+    public void runRound() {
+        /*
+        go through each match, call getWinner from match, and store winner in winners arraylist
+        and then store losers in loser list
+        */
     }
-    
+
     /*
-    should this print out the winners list and or the matches list?
-    
-    */
-    public String toString(){
+    print out all matches
+     */
+    public String toString() {
         String output = "";
         return output;
     }

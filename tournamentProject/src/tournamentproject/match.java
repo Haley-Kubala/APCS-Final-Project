@@ -14,8 +14,9 @@ public class match {
     private competitor competitor1;
     private competitor competitor2;
 
-    public match() {
-
+    public match(competitor one, competitor two) {
+        competitor1 = one; 
+        competitor2 = two;
     }
 
     /**
@@ -55,7 +56,8 @@ public class match {
     
     */
     public String toString() {
-        String output = "";
+        
+        String output = "competitor one : "  + ;
         return output;
     }
 }
