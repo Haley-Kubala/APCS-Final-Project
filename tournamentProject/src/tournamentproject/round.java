@@ -58,7 +58,9 @@ public class round {
         and then store losers in loser list
          */
         for (match m : matches) {
-            
+            competitor winner = m.getWinner();
+            if(m.getWinner())
+            winners.add(winner);
         }
     }
 
