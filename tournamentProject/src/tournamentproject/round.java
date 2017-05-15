@@ -52,6 +52,10 @@ public class round {
         this.matches = matches;
     }
 
+    /**
+     * calls getWinner for each match. stores winner in winners arraylist and
+     * then stores the loser in the loser list
+     */
     public void runRound() {
         /*
         go through each match, call getWinner from match, and store winner in winners arraylist
@@ -59,9 +63,14 @@ public class round {
          */
         for (match m : matches) {
             competitor winner = m.getWinner();
-            if(m.getWinner())
             winners.add(winner);
+            if (m.getWinner() == m.getCompetitor1()) {
+                losers.add(m.getCompetitor2());
+            } else {
+                losers.add(m.getCompetitor1());
+            }
         }
+
     }
 
     /*
