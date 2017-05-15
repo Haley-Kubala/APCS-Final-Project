@@ -56,14 +56,20 @@ public class round {
         /*
         go through each match, call getWinner from match, and store winner in winners arraylist
         and then store losers in loser list
-        */
+         */
+        for (match m : matches) {
+            
+        }
     }
 
     /*
     print out all matches
      */
     public String toString() {
-        String output = "";
+        String output = " ";
+        for (match m : matches) {
+            output += m;
+        }
         return output;
     }
 

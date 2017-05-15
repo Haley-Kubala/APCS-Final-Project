@@ -5,6 +5,8 @@
  */
 package tournamentproject;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Haley
@@ -15,7 +17,7 @@ public class match {
     private competitor competitor2;
 
     public match(competitor one, competitor two) {
-        competitor1 = one; 
+        competitor1 = one;
         competitor2 = two;
     }
 
@@ -46,18 +48,31 @@ public class match {
     public void setCompetitor2(competitor competitor2) {
         this.competitor2 = competitor2;
     }
-    
-    /*
-    getWinner() method? what does match even do if it
-    doesn't determine the winner between the two competitors
-    how does round do this instead?
-    how does match even reference round if it doesn't extend it?
-    what should this toString() return? the winner?
-    
-    */
+
+    /**
+     * uses a scanner to take a user inputed string then takes the string and
+     * compares it to competitor string
+     *
+     * @return
+     */
+    public competitor getWinner() {
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            System.out.println("Who won? Enter Winner");
+            String name = sc.nextLine();
+            if (name.equals(competitor1.getName())) {
+                return competitor1;
+            } else if (name.equals(competitor2.getName())) {
+                return competitor2;
+            } else {
+                System.out.println("Invalid name. No such competitor");
+            }
+        }
+        return null;
+    }
+
     public String toString() {
-        
-        String output = "competitor one : "  + ;
+        String output = "competitor one : " + getCompetitor1() + "competitor two: " + getCompetitor2();
         return output;
     }
 }
