@@ -21,14 +21,6 @@ public class round {
     how does round take the scanned in list from the file
     and make those strings into matches?
      */
- /*
-    ArrayList<match> winners = new ArrayList<>();
-    is this the correct way to reference winners... or is it just a competitor object
-    instead of a match object? 
-    is this a list of winners from each round?
-    what class/method/whatever uses this list? 
-    does it need to be ordered?
-     */
     public round(ArrayList<competitor> competitors) {
         /*needs to figure out how many matches there are going to be
         assign competitors in order
@@ -53,7 +45,7 @@ public class round {
     }
 
     /**
-     * calls getWinner for each match. stores winner in winners arraylist and
+     * calls getWinner() for each match. stores winner in winners array list and
      * then stores the loser in the loser list
      */
     public void runRound() {

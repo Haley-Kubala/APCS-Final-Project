@@ -31,12 +31,17 @@ competitors.add(participant);
 
     public void runTournament() {
         /*
-        while remaining.size() > 1 
-            create a new round and pass in remaining participants
-            run the round
-            set remaining = winners
+        while remaining.size() > 1  - done
+            create a new round and pass in remaining participants - done
+            run the round - done
+            set remaining = winners - uhm.. what? 
             
         */
+        while(remaining.size() > 1){
+            round newRound = new round();
+            newRound.runRound();
+            
+        }
     }
 
     public static void main(String args[]) throws IOException {
