@@ -37,6 +37,7 @@ competitors.add(participant);
             set remaining = winners - uhm.. what? 
             
         */
+        /*
         while(remaining.size() > 1){
             round newRound = new round();
             newRound.runRound();
@@ -52,10 +53,11 @@ competitors.add(participant);
             competitors.add(i);
             /* pass in list of competitors?? or should
             i call match instead?
-             */
+             *//*
             round round = new round(competitors);
 
         }
         file.close();
-    }
+    }*/
+
 }
