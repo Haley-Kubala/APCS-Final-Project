@@ -17,10 +17,7 @@ public class round {
     private ArrayList<competitor> winners = new ArrayList<>();
     private ArrayList<competitor> losers = new ArrayList<>();
 
-    /*
-    how does round take the scanned in list from the file
-    and make those strings into matches?
-     */
+    
     public round(ArrayList<competitor> competitors) {
         /*needs to figure out how many matches there are going to be
         assign competitors in order
