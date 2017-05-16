@@ -17,7 +17,6 @@ public class round {
     private ArrayList<competitor> winners = new ArrayList<>();
     private ArrayList<competitor> losers = new ArrayList<>();
 
-    
     public round(ArrayList<competitor> competitors) {
         /*needs to figure out how many matches there are going to be
         assign competitors in order
@@ -46,10 +45,7 @@ public class round {
      * then stores the loser in the loser list
      */
     public void runRound() {
-        /*
-        go through each match, call getWinner from match, and store winner in winners arraylist
-        and then store losers in loser list
-         */
+
         for (match m : matches) {
             competitor winner = m.getWinner();
             winners.add(winner);
