@@ -45,12 +45,17 @@ public class roundTest {
     public void testBracketSize() {
         System.out.println("bracketSize");
         int size = 0;
-        round instance = new round();
+        ArrayList<competitor> c = new ArrayList<>();
+        round instance = new round(c, size);
         int expResult = 0;
         int result = instance.bracketSize(size);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(8, instance.bracketSize(5));
+        assertEquals(16, instance.bracketSize(9));
+        assertEquals(32, instance.bracketSize(32));
+        assertEquals(128, instance.bracketSize(66));
+        assertEquals(2, instance.bracketSize(2));
+        
     }
 
     

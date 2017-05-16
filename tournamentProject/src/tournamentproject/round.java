@@ -19,30 +19,31 @@ public class round {
 
     public round(ArrayList<competitor> competitors, int size) {
         int matchCount = 0;
-        
+
         /*needs to figure out how many matches there are going to be
         assign competitors in order
         this is how we populate matches
         
          */
-
     }
-    
-    
-    public int bracketSize(int size){
+
+    public int bracketSize(int size) {
+        if (size <= 0) {
+            return 0;
+        }
         int bracketSize = 1;
         boolean powerOfTwo = true;
-        while(size != 0){
-            if(size %2 == 1){
+        while (size != 0) {
+            if (size % 2 == 1) {
                 size += size - 1;
             }
-            bracketSize += bracketSize/2;
-            size += size/2;
-            
-                
+            bracketSize = bracketSize * 2;
+            size = size / 2;
+
         }
         return bracketSize;
     }
+
     /**
      * @return the matches
      */
