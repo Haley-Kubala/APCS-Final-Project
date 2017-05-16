@@ -45,7 +45,7 @@ public class roundTest {
     public void testBracketSize() {
         System.out.println("bracketSize");
         int size = 0;
-        round instance = null;
+        round instance = new round();
         int expResult = 0;
         int result = instance.bracketSize(size);
         assertEquals(expResult, result);

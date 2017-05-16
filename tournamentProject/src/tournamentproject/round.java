@@ -17,7 +17,7 @@ public class round {
     private ArrayList<competitor> winners = new ArrayList<>();
     private ArrayList<competitor> losers = new ArrayList<>();
 
-    public round(ArrayList<competitor> competitors) {
+    public round(ArrayList<competitor> competitors, int size) {
         int matchCount = 0;
         
         /*needs to figure out how many matches there are going to be
