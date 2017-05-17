@@ -20,13 +20,13 @@ public class tournament {
     private ArrayList<competitor> remaining = new ArrayList<>();
 
     public tournament(ArrayList<String> competitors) {
-       
+
         //make names into competitor objects
         //for each fighter in competitors
         competitor participant = new competitor("");
-        //competitors.add(participant);
+        competitors.add(participant);
         //set remaining = competitors
-                
+
     }
 
     public void runTournament() {
@@ -36,15 +36,17 @@ public class tournament {
             run the round - done
             set remaining = winners - uhm.. what? 
             
-        */
-        /*
-        while(remaining.size() > 1){
-            round newRound = new round();
+         */
+
+        while (remaining.size() > 1) {
+            //is this the right int for the size?
+            round newRound = new round(competitors, competitors.size());
             newRound.runRound();
-            
+
         }
     }
 
+    /*put this method into it's own tournamentRunner class
     public static void main(String args[]) throws IOException {
 
         Scanner file = new Scanner(new File("some file"));
@@ -53,11 +55,11 @@ public class tournament {
             competitors.add(i);
             /* pass in list of competitors?? or should
             i call match instead?
-             *//*
+     *//*
             round round = new round(competitors);
 
         }
         file.close();
     }*/
 
-}}
+}
