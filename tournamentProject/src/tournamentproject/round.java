@@ -18,8 +18,8 @@ public class round {
     private ArrayList<competitor> losers = new ArrayList<>();
 
     public round(ArrayList<competitor> competitors, int size) {
-        int matchCount = 0;
-
+        int matchCount = bracketSize(size);
+        
         /*needs to figure out how many matches there are going to be
         assign competitors in order
         this is how we populate matches
@@ -28,20 +28,9 @@ public class round {
     }
 
     public int bracketSize(int size) {
-        if (size <= 0) {
-            return 0;
-        }
-        int bracketSize = 1;
-        boolean powerOfTwo = true;
-        while (size != 0) {
-            if (size % 2 == 1) {
-                size += size - 1;
-            }
-            bracketSize = bracketSize * 2;
-            size = size / 2;
-
-        }
-        return bracketSize;
+        int bracketSize = (int)(Math.log(size)/Math.log(2) + 0.99);
+        
+        return (int)(Math.pow(2, bracketSize));
     }
 
     /**

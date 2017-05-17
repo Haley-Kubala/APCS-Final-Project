@@ -20,13 +20,13 @@ public class tournament {
     private ArrayList<competitor> remaining = new ArrayList<>();
 
     public tournament(ArrayList<String> competitors) {
-        /*
-        make names into competitor objects
-        for each fighter in competitors
-competitor participant = new competitor(fighter);
-competitors.add(participant);
-        set remaining = competitors
-         */
+       
+        //make names into competitor objects
+        //for each fighter in competitors
+        competitor participant = new competitor("");
+        //competitors.add(participant);
+        //set remaining = competitors
+                
     }
 
     public void runTournament() {
