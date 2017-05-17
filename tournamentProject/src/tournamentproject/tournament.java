@@ -46,20 +46,4 @@ public class tournament {
         }
     }
 
-    /*put this method into it's own tournamentRunner class
-    public static void main(String args[]) throws IOException {
-
-        Scanner file = new Scanner(new File("some file"));
-        while (file.hasNextLine()) {
-            int i = file.nextInt();
-            competitors.add(i);
-            /* pass in list of competitors?? or should
-            i call match instead?
-     *//*
-            round round = new round(competitors);
-
-        }
-        file.close();
-    }*/
-
 }
