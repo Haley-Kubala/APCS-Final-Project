@@ -20,17 +20,17 @@ public class round {
     public round(ArrayList<competitor> competitors, int size) {
         int matchCount = bracketSize(size);
         for (int j = 0; j < matchCount; j++) {
-            for (int i = 0; i < competitors.size(); i++) {
-                match match = new match(competitors.get(i), competitors.get(i + 1));
+            if ((j + matchCount) <= competitors.size()) {
+                match match = new match(competitors.get(j), competitors.get(j + matchCount));
                 matches.add(match);
-                //uhm... did I use matchCount right?? halp me
+            } else {
+                competitor bye = new competitor("bye");
+                match match = new match(competitors.get(j), bye);
+                matches.add(match);
             }
+
         }
-        /*needs to figure out how many matches there are going to be - done
-        assign competitors in order
-        this is how we populate matches
-        
-         */
+
     }
 
     public int bracketSize(int size) {
@@ -61,7 +61,7 @@ public class round {
         for (match m : matches) {
             competitor winner = m.getWinner();
             winners.add(winner);
-            if (m.getWinner() == m.getCompetitor1()) {
+            if (m.getWinner().getName().equals(m.getCompetitor1().getName())) {
                 losers.add(m.getCompetitor2());
             } else {
                 losers.add(m.getCompetitor1());

@@ -34,7 +34,7 @@ public class competitor {
      * @return the placement
      */
     public int getPlacement() {
-        return placement;
+        return this.placement;
     }
 
     /**

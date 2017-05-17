@@ -24,7 +24,7 @@ public class tournament {
         //make names into competitor objects
         //for each fighter in competitors
         competitor participant = new competitor("");
-        competitors.add(participant);
+        //competitors.add(participant);
         //set remaining = competitors
 
     }
