@@ -19,8 +19,14 @@ public class round {
 
     public round(ArrayList<competitor> competitors, int size) {
         int matchCount = bracketSize(size);
-        
-        /*needs to figure out how many matches there are going to be
+        for (int j = 0; j < matchCount; j++) {
+            for (int i = 0; i < competitors.size(); i++) {
+                match match = new match(competitors.get(i), competitors.get(i + 1));
+                matches.add(match);
+                //uhm... did I use matchCount right?? halp me
+            }
+        }
+        /*needs to figure out how many matches there are going to be - done
         assign competitors in order
         this is how we populate matches
         
@@ -28,9 +34,8 @@ public class round {
     }
 
     public int bracketSize(int size) {
-        int bracketSize = (int)(Math.log(size)/Math.log(2) + 0.99);
-        
-        return (int)(Math.pow(2, bracketSize));
+        int bracketSize = (int) (Math.log(size) / Math.log(2) + 0.99);
+        return (int) (Math.pow(2, bracketSize));
     }
 
     /**
