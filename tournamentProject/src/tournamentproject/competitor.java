@@ -10,12 +10,14 @@ package tournamentproject;
  * @author Haley
  */
 public class competitor {
+
     private String name;
     private int placement;
 
     public competitor(String n) {
         name = n;
     }
+
     /**
      * @return the name
      */
@@ -43,14 +45,10 @@ public class competitor {
     public void setPlacement(int placement) {
         this.placement = placement;
     }
-    
-    /*
-    how does it get placement?
-    
-    */
-    public String toString(){
+
+    public String toString() {
         String output = "name :: " + getName() + " " + "place :: " + getPlacement();
         return output;
     }
-    
+
 }

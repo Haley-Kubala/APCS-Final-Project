@@ -7,6 +7,7 @@ package tournamentproject;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -16,17 +17,16 @@ import java.util.Scanner;
 public class tournamentRunner {
     public static void main(String args[]) throws IOException {
 
-        Scanner file = new Scanner(new File("some file"));
+        Scanner file = new Scanner(new File("names.dat"));
+        ArrayList<String> participants = new ArrayList<String>();
+        
         while (file.hasNextLine()) {
-            int i = file.nextInt();
-            competitors.add(i);
-            /* pass in list of competitors?? or should
-            i call match instead?
-     */
-            round round = new round(competitors);
-
+            participants.add(file.nextLine());
         }
         file.close();
+        System.out.println(participants);
+        tournament tourney = new tournament(participants);
+        System.out.println(tourney.runTournament());
     }
 
 }

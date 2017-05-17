@@ -17,8 +17,10 @@ public class round {
     private ArrayList<competitor> winners = new ArrayList<>();
     private ArrayList<competitor> losers = new ArrayList<>();
 
-    public round(ArrayList<competitor> competitors, int size) {
-        int matchCount = bracketSize(size);
+    public round(ArrayList<competitor> competitors) {
+        System.out.println(competitors);
+        int matchCount = bracketSize(competitors.size());
+        System.out.println(matchCount);
         for (int j = 0; j < matchCount; j++) {
             if ((j + matchCount) <= competitors.size()) {
                 match match = new match(competitors.get(j), competitors.get(j + matchCount));
@@ -60,11 +62,11 @@ public class round {
 
         for (match m : matches) {
             competitor winner = m.getWinner();
-            winners.add(winner);
+            getWinners().add(winner);
             if (m.getWinner().getName().equals(m.getCompetitor1().getName())) {
-                losers.add(m.getCompetitor2());
+                getLosers().add(m.getCompetitor2());
             } else {
-                losers.add(m.getCompetitor1());
+                getLosers().add(m.getCompetitor1());
             }
         }
 
@@ -77,8 +79,37 @@ public class round {
         String output = " ";
         for (match m : matches) {
             output += m;
+            output += "\n";
         }
         return output;
+    }
+
+    /**
+     * @return the winners
+     */
+    public ArrayList<competitor> getWinners() {
+        return winners;
+    }
+
+    /**
+     * @param winners the winners to set
+     */
+    public void setWinners(ArrayList<competitor> winners) {
+        this.winners = winners;
+    }
+
+    /**
+     * @return the losers
+     */
+    public ArrayList<competitor> getLosers() {
+        return losers;
+    }
+
+    /**
+     * @param losers the losers to set
+     */
+    public void setLosers(ArrayList<competitor> losers) {
+        this.losers = losers;
     }
 
 }

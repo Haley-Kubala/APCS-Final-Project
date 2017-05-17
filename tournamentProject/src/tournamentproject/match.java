@@ -58,7 +58,7 @@ public class match {
     public competitor getWinner() {
         if (competitor1.getName().equals("bye")) {
             return competitor2;
-        } else if(competitor2.getName().equals("bye")) {
+        } else if (competitor2.getName().equals("bye")) {
             return competitor1;
         }
         Scanner sc = new Scanner(System.in);
@@ -77,7 +77,7 @@ public class match {
     }
 
     public String toString() {
-        String output = "competitor one : " + getCompetitor1() + "competitor two: " + getCompetitor2();
+        String output = "competitor one : " + getCompetitor1() + " " + "competitor two: " + getCompetitor2();
         return output;
     }
 }
