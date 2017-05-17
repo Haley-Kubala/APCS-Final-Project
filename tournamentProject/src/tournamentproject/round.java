@@ -23,7 +23,7 @@ public class round {
         System.out.println(matchCount);
         for (int j = 0; j < matchCount; j++) {
             if ((j + matchCount) <= competitors.size()) {
-                match match = new match(competitors.get(j), competitors.get(j + matchCount));
+                match match = new match(competitors.get(j), competitors.get(j - 1 + matchCount));
                 matches.add(match);
             } else {
                 competitor bye = new competitor("bye");

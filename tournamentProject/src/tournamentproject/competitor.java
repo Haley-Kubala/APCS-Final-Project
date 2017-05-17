@@ -11,9 +11,10 @@ package tournamentproject;
  */
 public class competitor {
 
-    private String name;
-    private int placement;
-
+    private String name = "NOT SET";
+    private int placement = -1;
+    
+    
     public competitor(String n) {
         name = n;
     }

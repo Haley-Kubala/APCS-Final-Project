@@ -16,8 +16,14 @@ import java.util.Scanner;
  */
 public class tournamentRunner {
     public static void main(String args[]) throws IOException {
-
-        Scanner file = new Scanner(new File("names.dat"));
+        competitor c1 = new competitor("jive");
+        competitor c2 = new competitor("wumple");
+        ArrayList<competitor> a = new ArrayList<competitor>();
+        a.add(c1);
+        a.add(c2);
+        round r = new round(a);
+        r.runRound();
+   /*     Scanner file = new Scanner(new File("names.dat"));
         ArrayList<String> participants = new ArrayList<String>();
         
         while (file.hasNextLine()) {
@@ -26,7 +32,7 @@ public class tournamentRunner {
         file.close();
         System.out.println(participants);
         tournament tourney = new tournament(participants);
-        System.out.println(tourney.runTournament());
+        System.out.println(tourney.runTournament());*/
     }
 
 }

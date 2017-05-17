@@ -56,13 +56,17 @@ public class match {
      * @return
      */
     public competitor getWinner() {
+        
         if (competitor1.getName().equals("bye")) {
             return competitor2;
         } else if (competitor2.getName().equals("bye")) {
             return competitor1;
         }
         Scanner sc = new Scanner(System.in);
+        sc.next();
         while (sc.hasNext()) {
+            //print out competitors to choose from
+            System.out.println();
             System.out.println("Who won? Enter Winner");
             String name = sc.nextLine();
             if (name.equals(competitor1.getName())) {
