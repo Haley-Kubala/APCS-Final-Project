@@ -72,10 +72,9 @@ public class match {
             return competitor1;
         }
         Scanner sc = new Scanner(System.in);
-        //sc.next();
         do {
             //print out competitors to choose from
-            System.out.println();
+            System.out.println("");
             System.out.println("Who won? Enter Winner");
             String name = sc.nextLine();
             if (name.equals(competitor1.getName())) {
