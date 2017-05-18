@@ -17,6 +17,17 @@ public class round {
     private ArrayList<competitor> winners = new ArrayList<>();
     private ArrayList<competitor> losers = new ArrayList<>();
 
+    /**
+     * The round constructor takes an array list of competitors It calls
+     * matchCount() with the size of competitors to get the bracketSize. It then
+     * breaks the list at the number of matches. Then it assigns the first
+     * number of competitors to the first slot in each match, then finds where
+     * the list breaks and assigns those to the second slot in each match. If
+     * there are no more names it will assign empty slots to "bye". adds each
+     * match pair to the match arrayList
+     *
+     * @param competitors
+     */
     public round(ArrayList<competitor> competitors) {
         System.out.println(competitors);
         int matchCount = bracketSize(competitors.size());
@@ -35,6 +46,13 @@ public class round {
 
     }
 
+    /**
+     * Takes the log of the size of the competitors and then takes that to the
+     * power of two in order to determine how many matches we will have
+     *
+     * @param size
+     * @return
+     */
     public int bracketSize(int size) {
         int bracketSize = (int) (Math.log(size) / Math.log(2) + 0.99);
         return (int) (Math.pow(2, bracketSize));
@@ -72,8 +90,10 @@ public class round {
 
     }
 
-    /*
-    print out all matches
+    /**
+     * Prints out the matches
+     *
+     * @return
      */
     public String toString() {
         String output = " ";

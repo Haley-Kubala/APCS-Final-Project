@@ -13,8 +13,12 @@ public class competitor {
 
     private String name = "NOT SET";
     private int placement = -1;
-    
-    
+
+    /**
+     * Sets the name to a string
+     *
+     * @param n
+     */
     public competitor(String n) {
         name = n;
     }
@@ -47,6 +51,11 @@ public class competitor {
         this.placement = placement;
     }
 
+    /**
+     * prints out a competitors name and their placement
+     *
+     * @return
+     */
     public String toString() {
         String output = "name :: " + getName() + " " + "place :: " + getPlacement();
         return output;

@@ -19,6 +19,14 @@ public class tournament {
     private ArrayList<competitor> competitors = new ArrayList<>();
     private ArrayList<competitor> remaining = new ArrayList<>();
 
+    /**
+     * For each competitor in the competitors arraylist we 
+     * create a new competitor and then reference this classes
+     * competitor and then add the newly created competitor to 
+     * the list. then adds the competitors to remaining
+     * 
+     * @param competitors
+     */
     public tournament(ArrayList<String> competitors) {
         for (String c : competitors) {
             competitor comp = new competitor(c);
@@ -28,13 +36,21 @@ public class tournament {
         System.out.println(this.competitors);
 
     }
-
+    /**
+     * This method runs the tournament. While the remaining 
+     * arrayList is greater than one we instantiate a new round
+     * and then run that round. After we run the round we set
+     * remaining to the winners of that round
+     * after the while loop we return the first competitor in 
+     * remaining
+     * @return 
+     */
     public competitor runTournament() {
         while (remaining.size() > 1) {
             round newRound = new round(remaining);
             newRound.runRound();
             remaining = newRound.getWinners();
-            
+
         }
         return remaining.get(0);
     }

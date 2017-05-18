@@ -16,6 +16,12 @@ public class match {
     private competitor competitor1;
     private competitor competitor2;
 
+    /**
+     * sets the competitors to
+     *
+     * @param one
+     * @param two
+     */
     public match(competitor one, competitor two) {
         competitor1 = one;
         competitor2 = two;
@@ -50,13 +56,16 @@ public class match {
     }
 
     /**
-     * uses a scanner to take a user inputed string then takes the string and
-     * compares it to competitor string
+     * Uses a scanner to take a user inputed string then takes the string and
+     * compares it to competitor string name. Before that though it checks to
+     * see if the name is 'bye' if it is it will automatically return competitor
+     * with a name. if a user gives the program some other crap besides a string
+     * name of a competitor it will give them an error message
      *
      * @return
      */
     public competitor getWinner() {
-        
+
         if (competitor1.getName().equals("bye")) {
             return competitor2;
         } else if (competitor2.getName().equals("bye")) {
@@ -80,6 +89,11 @@ public class match {
         return null;
     }
 
+    /**
+     * prints out each competitors name and their placement
+     *
+     * @return
+     */
     public String toString() {
         String output = "competitor one : " + getCompetitor1() + " " + "competitor two: " + getCompetitor2();
         return output;
