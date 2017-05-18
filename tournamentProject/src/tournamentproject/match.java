@@ -72,8 +72,8 @@ public class match {
             return competitor1;
         }
         Scanner sc = new Scanner(System.in);
-        sc.next();
-        while (sc.hasNext()) {
+        //sc.next();
+        do {
             //print out competitors to choose from
             System.out.println();
             System.out.println("Who won? Enter Winner");
@@ -85,7 +85,7 @@ public class match {
             } else {
                 System.out.println("Invalid name. No such competitor");
             }
-        }
+        } while (sc.hasNext());
         return null;
     }
 
