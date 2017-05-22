@@ -17,17 +17,19 @@ import java.util.Scanner;
 public class tournamentRunner {
 
     public static void main(String args[]) throws IOException {
-        competitor c1 = new competitor("jive");
-        competitor c2 = new competitor("wumple");
+        competitor c1 = new competitor("nick");
+        competitor c2 = new competitor("alex");
+        
         ArrayList<competitor> a = new ArrayList<competitor>();
         a.add(c1);
         a.add(c2);
-        //round r = new round(a);h
+        round r = new round(a);
         //
-        //r.runRound();
-        match m = new match(c1, c2);
+        r.runRound();
+        
+        //match m = new match(c1, c2);
         //m.getWinner();
-        System.out.println(m.getWinner());
+        //System.out.println(m.getWinner());
         //System.out.println(m);
         /*     Scanner file = new Scanner(new File("names.dat"));
         ArrayList<String> participants = new ArrayList<String>();

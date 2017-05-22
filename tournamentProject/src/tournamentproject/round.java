@@ -79,9 +79,9 @@ public class round {
     public void runRound() {
 
         for (match m : matches) {
-            competitor winner = m.getWinner();
+            competitor winner = m.determineWinner();
             getWinners().add(winner);
-            if (m.getWinner().getName().equals(m.getCompetitor1().getName())) {
+            if (m.determineWinner().getName().equals(m.getCompetitor1().getName())) {
                 getLosers().add(m.getCompetitor2());
             } else {
                 getLosers().add(m.getCompetitor1());
