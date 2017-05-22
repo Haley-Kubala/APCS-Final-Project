@@ -64,7 +64,7 @@ public class match {
      *
      * @return
      */
-    public competitor determineWinner() {
+    public competitor getWinner() {
 
         if (competitor1.getName().equals("bye")) {
             return competitor2;

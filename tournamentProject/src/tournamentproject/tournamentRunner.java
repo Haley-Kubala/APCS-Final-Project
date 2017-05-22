@@ -25,11 +25,11 @@ public class tournamentRunner {
         a.add(c2);
         round r = new round(a);
         //
-        r.runRound();
+        //r.runRound();
         
-        //match m = new match(c1, c2);
-        //m.getWinner();
-        //System.out.println(m.getWinner());
+        match m = new match(c1, c2);
+        m.getWinner();
+        System.out.println(m.getWinner());
         //System.out.println(m);
         /*     Scanner file = new Scanner(new File("names.dat"));
         ArrayList<String> participants = new ArrayList<String>();
